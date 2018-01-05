@@ -14,12 +14,12 @@ module.exports = {
 		data.split('\n').forEach(function(part){
 			if(!part) return;
 
-		  attrColon = part.indexOf(': ');
+		  attrColon = part.indexOf(':');
 			attr = part.substr(0, attrColon);
 
 			if(attr !== ''){
 				returnArray.push({
-					"attribute": attr,
+					"attribute": attr.trim(),
 					"value": part.substr(attrColon+1).trim()
 				});
 			}
